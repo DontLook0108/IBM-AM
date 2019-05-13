@@ -9,20 +9,28 @@ function validaForm(frm) {
         erro_nome.textContent = "Nome necessário"; 
         frm.nome.focus();
         return false;   
+    } else {
+        erro_nome.textContent = "";
     }
-    if(frm.rm.value < 5|| frm.rm.value == "" || frm.rm.value == null) {
+    if (frm.rm.value < 5 || frm.rm.value == "" || frm.rm.value == null) {
         erro_rm.textContent = "RM necessário"; 
         frm.rm.focus();
         return false;
+    } else {
+        erro_rm.textContent = "";
     }
     if (frm.senha.value == "" || frm.senha.value == null) {
         erro_senha.textContent = "Senha necessária"; 
         frm.senha.focus(); 
         return false;
-    } 
+    } else {
+        erro_senha.textContent = "";
+    }
     if (frm.email.value.indexOf("@") == -1 || frm.email.valueOf.indexOf(".") == -1 || frm.email.value == "" || frm.email.value == null) {
         erro_email.textContent = "E-mail necessário";
         frm.email.focus();
         return false;
-    } 
+    } else {
+        erro_email.textContent = "";
+    }
 }
